@@ -13,7 +13,7 @@ for k=0:N-1
     end
 end
 
-mag = abs(dft);
+mag = real(dft);
 phase = angle(dft);
 
 t = 0:N-1;
@@ -43,7 +43,7 @@ for n=0:N-1
 end
 
 
-mag_idft = abs(idft);
+mag_idft = real(idft);
 subplot(2,2,3)
 stem(t,mag_idft,'r'), grid on, grid minor
 title('Magnitude of IDFT of DFT of seq.')
