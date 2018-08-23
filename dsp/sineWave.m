@@ -22,3 +22,5 @@ stem(t,f,'r'), grid on, grid minor % discrete data 2D plot
 title('Discrete')
 xlabel('Time')
 ylabel('Amplitude')
+
+print('-clipboard','-dbitmap')

@@ -53,3 +53,5 @@ stem(t2,f,'r'), grid on, grid minor
 title('Duty cycle : 75%')
 xlabel('Time')
 ylabel('Amplitude')
+
+print('-clipboard','-dbitmap')

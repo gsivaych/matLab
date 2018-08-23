@@ -6,7 +6,7 @@ clc; clear all;
 
 n = 0:32; % Domain
 func = @(n) exp(j*pi*n/8); % Function Definition
-x = func(n); % Function Implemention
+x = func(n); % Function Implementation
 
 x1 = real(x); % Extracting real parts.
 figure('Name','Function analysis','NumberTitle','off','Color','w')
@@ -36,3 +36,5 @@ stem(n,x4), grid on, grid minor
 title('Phase Value : Radians')
 xlabel('Amplitude')
 ylabel('Time')
+
+print('-clipboard','-dbitmap')

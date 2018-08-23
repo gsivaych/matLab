@@ -55,3 +55,5 @@ stem(t,seq,'b'), grid on, grid minor
 title('Input seq.')
 xlabel('Time')
 ylabel('Amplitude')
+
+print('-clipboard','-dbitmap')
