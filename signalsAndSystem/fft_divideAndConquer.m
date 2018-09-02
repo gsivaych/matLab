@@ -8,7 +8,7 @@ seq = input('Enter the seq. <= 8 samples : ');
 l = length(seq);
 
 % zero padding
-seq = [seq, zeros(N-l)];
+seq = [seq, zeros(1,N-l)];
 
 % Read column wise
 readMat(:,1) = seq(1:N/2);
