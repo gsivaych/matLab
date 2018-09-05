@@ -11,21 +11,15 @@ if(mod(len,2) == 0)
     n = len;
 else
     n = len+1;
+    disp('**Odd no of samples : zero padding to make even.');
 end
 
 % Required padding : atmost one zero
-seq = [seq,zeros(1,n-len)];
+seq = [seq,zeros(1,n-len)]
 
-% column wise read
-columnMat = zeros(2,2);
-for row = 1:n/2
-    col = 1;
-    columnMat(row,col) = seq(row);
-end
-for row = 1:n/2
-    col = 2;
-    columnMat(row,col) = seq(row+(n/2));
-end
+% Read column wise
+columnMat(:,1) = seq(1:n/2);
+columnMat(:,2) = seq((n/2)+1:n);
 
 % DFT row wise
 for row = 1:n/2
@@ -72,17 +66,16 @@ for row = 1:n/2
 end
 
 % Plots
-s = 0:len-1;
 figure('Name','FFT :Divide and Conquer','NumberTitle','off','Color','w')
 subplot(2,1,1)
-stem(s,seq,'b'), grid on, grid minor
+stem(0:n-1,seq,'b'), grid on, grid minor
 title('Input Seq.')
 xlabel('Sample')
 ylabel('Amplitude')
 
 subplot(2,1,2)
-stem(s,real(FFT),'r'), grid on, grid minor
-title('DFT/FFT')
+stem(0:n-1,real(FFT),'r'), grid on, grid minor
+title('DFT/FFT : Real part')
 xlabel('Sample')
 ylabel('Amplitude')
 
