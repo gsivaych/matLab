@@ -1,4 +1,4 @@
-# myMATLABcodes
+# myMATLABcode
 
 	Clone the repository `git clone httpps://github.com/gsivaych/matLab`
 
