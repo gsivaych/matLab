@@ -1,6 +1,6 @@
 # myMATLABcode
 
-	Clone the repository `git clone httpps://github.com/gsivaych/matLab`
+	Clone the repository `git clone https://github.com/gsivaych/matLab`
 
 ## MATLAB
 
