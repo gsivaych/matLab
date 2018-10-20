@@ -10,7 +10,14 @@
 
 ## Academic
 * Signals and Systems : UEC 404
-	* [CTFT](/signalsAndSystem/CTFT.m) , [DTFT](signalsAndSystem/DTFT.m) of Rectangular Pulse
+	* Basic signals : [Unit Impulse](signalsAndSystem/unitImpulse.m), [Unit Step](signalsAndSystem/unitStep.m),
+		[Unit Ramp](signalsAndSystem/unitRamp.m), [Ramp](signalsAndSystem/rampFunction.m), 
+		[Sinc](signalsAndSystem/sincFunction.m)
+	* Basic signal operations : [Decompose into Odd and Even parts](signalsAndSystem/decomposeFunction), 
+		[Shifting](signalsAndSystem/shifting.m), [Scaling](signalsAndSystem/scaling.m)
+	* [CTFT](/signalsAndSystem/CTFT.m) , [DTFT](signalsAndSystem/DTFT.m) of Rectangular Pulse, 
+		[8 pt FFT](signalsAndSystem/fft_divideAndConquer.m)
+	* [Convolution](signalsAndSystem/convolution.m), [Linear Convolution](linearConvolution.m)
 	* [Z-transform](/signalsAndSystem/ztrans2.m) of given impulse response of system
 #
 * Numerical Analysis  : [UMA 007](https://sites.google.com/site/nummaths/)
