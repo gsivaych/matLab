@@ -3,6 +3,8 @@ clc; clear all
 
 syms z n;
 
+% claculated poles and zeros
+
 %poles
 a = [1,-2.5,1];
 

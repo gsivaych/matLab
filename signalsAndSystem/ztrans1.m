@@ -5,6 +5,8 @@ clear all
 
 syms z n
 
+% calculated ploes and zeros
+
 %poles
 a = [1,-0.9];
 
@@ -29,5 +31,5 @@ simplify(z1)
 
 figure('Name','Z-Transform','NumberTitle','off','Color','w')
 zplane(b,a)
-title('Poles and Zeros of Z transform of system Y(n) = 0.9 Y(n-1) + x(n)')
+title('Poles and Zeros from Z transform of system Y(n) = 0.9 Y(n-1) + x(n)')
 print('-clipboard','-dbitmap')
