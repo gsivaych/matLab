@@ -32,21 +32,20 @@ for i = 1:b
     end
 end
 
+% len(conv_res) = len(Seq1) + len(seq2) -1
 c = a+b-1;
 t3 = 0:c-1;
-conv = zeros(1,c);
-m = max([a,b]);
-n = min([a,b]);
+convl = zeros(1,c);
 
 % extracting diagonals
 mat2 = flip(mat,2); % now we can use diag()
 for i=1:c
-    conv(i) = sum(diag(mat2,i-b));
+    convl(i) = sum(diag(mat2,i-b));
 end
-conv = flip(conv);
+convl = flip(convl);
 
 subplot(3,1,3)
-stem(t3,conv,'g'),grid on,  grid minor
+stem(t3,convl,'g'),grid on,  grid minor
 title('Convolution')
 xlabel('time')
 ylabel('Amplitude')

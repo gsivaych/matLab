@@ -52,3 +52,5 @@ plot(N,conv,'b'),grid on, grid minor
 title('x[n]*h[n]')
 xlabel('Time')
 ylabel('Amplitude')
+
+print('-clipboard','-dbitmap')
