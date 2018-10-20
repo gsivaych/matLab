@@ -1,7 +1,7 @@
 % Program to generate signal of ramp function
 clc; clear all;
 
-% RAMP FUNCTION - (slope 1, passes through origin [f(x) = x])
+% RAMP FUNCTION - (slope 1, passes through origin i.e. [f(x) = x])
 %   R[x] = x
 
 x = -5:0.001:5;

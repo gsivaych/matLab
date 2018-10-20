@@ -18,7 +18,8 @@ xlabel('Time')
 ylabel('Amplitude')
 
 y = -5:5;
-fn = [0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5];
+fn = y;
+fn(y<0) = 0;
 
 subplot(2,1,2);
 stem(y,fn,'r'),grid on, grid minor

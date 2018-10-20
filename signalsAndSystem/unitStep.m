@@ -11,7 +11,7 @@ clc; clear all;
 
 x = -5:0.001:5;
 f = zeros(size(x));
-f(x==0) = 0.5;
+%f(x==0) = 0.5;
 f(x>0) = 1;
 
 figure('Name','Unit Step','NumberTitle','off','Color','w')
@@ -23,8 +23,8 @@ ylabel('Amplitude')
 
 y = -5:5;
 fn = zeros(size(y));
-fn(y==0) = 0.5;
-fn(y>0) = 1;
+%fn(y==0) = 0.5;
+fn(y>=0) = 1;
 
 subplot(2,1,2);
 stem(y,fn,'r'),grid on, grid minor

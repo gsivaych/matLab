@@ -9,7 +9,7 @@ clc; clear all;
 
 x = -2:0.0001:2;
 f = zeros(size(x));
-f(x == 0) = 1;
+f(x == 0) = 1; % Inf won't plot so we use 1 to show it's max at zero
 
 figure('Name','Unit Impulse','NumberTitle','off','Color','w')
 subplot(2,1,1);
