@@ -7,6 +7,7 @@ clc; clear all;
 %------------------------------------------------------------
 %   One can't do CTFT in matlab, its always DTFT
 %       it's just - we'll be using line plot instead data plot
+%       and higher sampling frequency
 %------------------------------------------------------------
 
 % Inputs for rectangular pulse
@@ -35,12 +36,14 @@ end
 
 subplot(3,1,2)
 plot(r,x,'r'),grid on, grid minor
-title('Magnitude of Spectrum')
+title('Magnitude Spectrum')
 xlabel('Freq.')
 ylabel('Amplitude')
 
 subplot(3,1,3)
 plot(r,abs(angle(x)),'r'),grid on, grid minor
-title('Phase of Spectrum')
+title('Phase Spectrum')
 xlabel('Freq.')
 ylabel('Radian')
+
+print('-clipboard','-dbitmap')

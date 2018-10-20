@@ -4,7 +4,8 @@ clear all;
 
 % Divide and conquer method
 N = 8;
-seq = input('Enter the seq. <= 8 samples : ');
+disp('8-pt FFT')
+seq = input('Enter the seq. (8 or less samples) : ');
 l = length(seq);
 
 % zero padding
@@ -59,3 +60,5 @@ xlabel('Sample')
 ylabel('Amplitude')
 
 FFT
+
+print('-clipboard','-dbitmap')
