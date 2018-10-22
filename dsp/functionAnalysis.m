@@ -8,7 +8,8 @@ n = 0:32; % Domain
 func = @(n) exp(j*pi*n/8); % Function Definition
 x = func(n); % Function Implementation
 
-x1 = real(x); % Extracting real parts.
+% Extracting real parts.
+x1 = real(x);
 figure('Name','Function analysis','NumberTitle','off','Color','w')
 subplot(2,2,1) % Create axes in tiled positions
 stem(n,x1), grid on, grid minor % Discrete data 2D plot
@@ -16,21 +17,24 @@ title('Real Part')
 xlabel('Amplitude')
 ylabel('Time')
 
-x2 = imag(x); % Extracting imaginary parts
+% Extracting imaginary parts
+x2 = imag(x);
 subplot(2,2,2)
 stem(n,x2), grid on, grid minor
 title('Imaginary Part')
 xlabel('Amplitude')
 ylabel('Time')
 
-x3 = abs(x); % Absolute value function
+% Absolute value
+x3 = abs(x);
 subplot(2,2,3)
 stem(n,x3), grid on, grid minor
 title('Absolute Value')
 xlabel('Amplitude')
 ylabel('Time')
 
-x4 = angle(x); % Phase angle in radians
+% Phase angle in radians
+x4 = angle(x);
 subplot(2,2,4)
 stem(n,x4), grid on, grid minor
 title('Phase Value : Radians')

@@ -12,7 +12,8 @@ f(x > 0) = 1;
 f(x < 0) = -1;
 
 figure('Name','Signum Function','NumberTitle','off','Color','w')
-stem(x,f,'r'),grid on, grid minor
+subplot(2,1,1)
+stem(x,f,'b'),grid on, grid minor
 title('Signum Function : Discrete')
 xlabel('Time')
 ylabel('Amplitude')
