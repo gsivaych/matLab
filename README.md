@@ -42,3 +42,20 @@
 		* [Runge-kutta method](numericalAnalysis/rungeKuttaMethod.m) (fourth-order)
 #
 * Digital Signal Processing : UEC 502
+	* Basics : 
+		* [Ramp Signal](dsp/ramp.m), [Signum function](dsp/signum.m),
+			[Decomposing a function into Even & Odd parts](dsp/decomposeFunction.m) 
+		* [Frequenecy & phase](dsp/sineWave.m) - Sine wave **,** [Duty cycle](dsp/squareWave.m) - Square wave
+	* [DFT IDFT](dsp/dft_IDFT.m)
+	* [Convolution](dsp/convolution.m)
+		* [Circular Convolution](dsp/circularConv.m)
+		* [Circular Convolution using DFT IDFT](dsp/circularConv_using_dftIDFT.m)
+		* [Circular Convolution using Linear Convolution](dsp/circularConv_using_linearConv.m)
+		* [Linear Convolution using Circular Convolution](dsp/linearConv_using_circularConv.m)
+	* FFTs (Fast Fourier Transforms)
+		* [Cooley–tukey algorithm](dsp/fft_divideAndConquer.m) (divide and conquer)
+		* [Decimation in Time](dsp/fft_dit.m)
+			* [Radix 2](dsp/fft_radix2_dit.m)
+			* [Split Radix](dsp/fft_splitRadix.m)
+		* [Decimation in Frequency](dsp/fft_dif.m)
+			* [Radix 2](dsp/fft_radix2_dif.m)
