@@ -25,7 +25,7 @@ xlabel('Amplitude')
 ylabel('Time')
 
 
-nr = -10:10; % Domain, Sampled 0.1 apart
+nr = -10:10; % Domain, Sampled 1 apart
 
 evenr = (func(nr)+func(-nr))/2; % Even parts of function
 
