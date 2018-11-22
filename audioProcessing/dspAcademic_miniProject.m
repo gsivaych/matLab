@@ -1,11 +1,11 @@
-% Program to load and apply `low-pass` filters on input audio file with bandwidths
-%    i.e passBand edges     5.5 kHz,    4.0 kHz,  3.2 kHz
+% Program to design & apply `low-pass` digital filters on input audio file
+%    given : passBand edges   -  5.5 kHz,    4.0 kHz,  3.2 kHz
 clc; clear all;
 
 global passBand_ripple
-passBand_ripple = 0.5; % dB allowed max. variataion in passband
+passBand_ripple = 0.5; % dB allowed maximum variataion in passband
 global stopBand_atteneuation
-stopBand_atteneuation = 80; % dB (stop 99.99 % i.e let go only 0.01 %)
+stopBand_atteneuation = 80; % dB (effectively stop 99.99 %, i.e 0.01 % leakage)
 
 fileName = input('Input audio file name (Str) : ');
 % check if file exists
@@ -15,22 +15,22 @@ if exist(fileName, 'file')
     t = (0:length(y)-1)/Fs; % duartion of audio
     track = audioplayer(y,Fs);
     disp('Original file.. playing..')
-    playblocking(track)
+%     playblocking(track)
     
     y1 = lowpassFIR(y,Fs,5.5e3); % 5.5 kHz
     track1 = audioplayer(y1,Fs);
     disp('Filtered with 5.5 kHz.. plyaing..')
-    playblocking(track1);
+%     playblocking(track1);
     
     y2 = lowpassFIR(y,Fs,4e3); % 4.0 kHz
     track2 = audioplayer(y2,Fs);
     disp('Filtered with 4.0 kHz.. plyaing..')
-    playblocking(track2);
+%     playblocking(track2);
     
     y3 = lowpassFIR(y,Fs,3.2e3); % 3.2 kHz
     track3 = audioplayer(y3,Fs);
     disp('Filtered with 3.2 kHz.. plyaing..')
-    playblocking(track3);
+%     playblocking(track3);
     
     subplot(2,1,1); plot(t,y), grid on, grid minor
     title('Original'); xlabel('Time'); ylabel('Amplitude')
@@ -50,6 +50,8 @@ function filtered_x = lowpassFIR (x,Fs,Fp)
     lowpassFIR_filter = dsp.LowpassFilter('DesignForMinimumOrder',true, ...
         'PassbandFrequency',Fp,'SampleRate',Fs,...
         'PassbandRipple',passBand_ripple, 'StopbandAttenuation',stopBand_atteneuation);
+    filterDetails = measure(lowpassFIR_filter)
+    filterOrder = order(lowpassFIR_filter)
     filtered_x = lowpassFIR_filter(x);
     fvtool(lowpassFIR_filter,'Fs',Fs,'Color','White'), grid on, grid minor
 end
