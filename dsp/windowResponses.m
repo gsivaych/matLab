@@ -21,13 +21,13 @@ w = zeros(N,1);
 % for n = 0:M
 %     w(n+1) = 0.5 - 0.5*cos(2*pi*n/M);
 % end
-% w_ = rectwin(N);
+% w_ = hann(N);
 
 %% Hamming window
 % for n = 0:M
 %     w(n+1) = 0.54 - 0.46*cos(2*pi*n/M);
 % end
-% w_ = rectwin(N);
+% w_ = hamming(N);
 
 %% Modified Bartlett-Hanning window
 % for n = 0:M
