@@ -59,3 +59,9 @@
 			* [Split Radix](dsp/fft_splitRadix.m)
 		* [Decimation in Frequency](dsp/fft_dif.m)
 			* [Radix 2](dsp/fft_radix2_dif.m)
+	* [Frequency Response of Window functions](dsp/windowResponses.m)
+	* Digital Filter Design
+		* [FIR LowPass using Hanning Window](dsp/FIR_lowpass_Windowing.m)
+		* [FIR BandPass using Kaiser Window](dsp/FIR_bandpass_Kaiser.m)
+		* [Butterworth HighPass](dsp/FIR_highpass_Butterworth.m)
+		* [Chebyshev LowPass](dsp/FIR_lowpass_Chebyshev.m)
