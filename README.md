@@ -41,6 +41,10 @@
 		* [Modified Euler's method](numericalAnalysis/modifiedEulersMethod.m)
 		* [Runge-kutta method](numericalAnalysis/rungeKuttaMethod.m) (fourth-order)
 #
+* Advanced Numerical Methods : UMA 061
+	* Differentiation & Integration
+		* Romberg Integration
+#
 * Digital Signal Processing : UEC 502
 	* Basics : 
 		* [Ramp Signal](dsp/ramp.m), [Signum function](dsp/signum.m),
