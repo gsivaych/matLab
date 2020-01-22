@@ -1,17 +1,14 @@
-% Z-Transform of Y(n) = 0.9 Y(n-1) + x(n)
+%% Z-Transform of Y(n) = 0.9 Y(n-1) + x(n)
+clc; clear all
 
-clc;
-clear all
-
+%% Requires Symbolic Math Toolbox
 syms z n
 
-% calculated ploes and zeros
-
+%% calculated ploes and zeros
 %poles
-a = [1,-0.9];
-
+    a = [1,-0.9];
 %zeros
-b = [1,0];
+    b = [1,0];
 
 y = zeros(1,length(a)-1);
 

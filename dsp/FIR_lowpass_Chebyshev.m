@@ -1,4 +1,4 @@
-% Program to design a Chebyshev Type-1 analog,digital high pass filter as
+%% Program to design a Chebyshev Type-1 analog,digital high pass filter as
 %   Pass-band Frequency: 1.3 kHz
 %   Stop-band Frequency: 1.55 kHz
 %   i.e. Transition-width : 0.25 kHz
@@ -21,7 +21,7 @@ N = ceil(n);
 
 ohm_c = ohm_p; % epsilon = 1
 
-% analog filter
+% analog filter : Requires DSP System Toolbox or Signal Processing Toolbox
 [A_zeros,A_poles,A_gain] = cheby1(N,Ap,ohm_c,'low');
 
 A_tF = zp2tf(A_zeros,A_poles,A_gain); % transfer function

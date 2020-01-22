@@ -1,9 +1,10 @@
-% Program to design a Digital FIR filter using Kaiser-Bessel window as
+%% Program to design a Digital FIR filter using Kaiser-Bessel window as
 %   Pass-band : 150 - 250 Hz
 %   Transition-width : 50 Hz
 %   Pass-band ripple : 0.1 dB
 %   Stop-band atteneuation : 60 dB
 %   Sampling Frequency : 1 kHz
+
 clc; clear all;
 
 Fpass = 150; Fstop = 250; Tw = 50;
@@ -31,7 +32,7 @@ else
     N = ceil(5.79/delta_w); % filter order
 end
         
-Kaiser_window = kaiser(N,beta);
+Kaiser_window = kaiser(N,beta); %% Requires Signal Processing Toolbox
 wvtool(Kaiser_window)
 
 FIR_Filter = fir1(N-1,[Fpass/Fn Fstop/Fn],'bandpass',Kaiser_window,'noscale');

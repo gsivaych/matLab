@@ -1,15 +1,14 @@
-% Z-Transform of x(n) = .5^n u(n) + 2^n u(n)
+%% Z-Transform of x(n) = .5^n u(n) + 2^n u(n)
 clc; clear all
 
+%% Requires Symbolic Math Toolbox
 syms z n;
 
-% claculated poles and zeros
-
+%% claculated poles and zeros
 %poles
-a = [1,-2.5,1];
-
+    a = [1,-2.5,1];
 %zeros
-b = [2,-2.5,0];
+    b = [2,-2.5,0];
 
 y = zeros(1,length(a)-1);
 

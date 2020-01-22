@@ -1,10 +1,11 @@
-% Program to design a Butterworth analog,digital high pass filter as
+%% Program to design a Butterworth analog,digital high pass filter as
 %   Pass-band Frequency: 2 kHz
 %   Stop-band Frequency: 3.5 kHz
 %   i.e. Transition-width : 1.5 kHz
 %   Pass-band ripple : 0.2 dB
 %   Stop-band atteneuation : 40 dB
 %   Sampling Frequency : 8 kHz
+
 clc; clear all;
 
 Fpass = 2e3; Fstop = 3.5e3; Tw = 1.5e3;
@@ -21,8 +22,8 @@ N = ceil(n);
 
 ohm_c = ohm_p/((1/del_P^2)-1)^(1/(2*N));
 
-% analog filter
-[A_zeros,A_poles,A_gain] = butter(N,ohm_c,'high');
+% analog filter : Requires DSP System Toolbox or Signal Processing Toolbox
+[A_zeros,A_poles,A_gain] = butter(N,ohm_c,'high'); 
 
 A_tF = zp2tf(A_zeros,A_poles,A_gain); % transfer function
 

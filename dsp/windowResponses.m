@@ -1,4 +1,5 @@
 %% Time and Frequency domain responses of various Window Functions.
+%%% Requires Signal Processing Toolbox
 clc; clear all;
 N = 25; M = N-1;
 w = zeros(N,1);

@@ -1,13 +1,15 @@
-%  Radix-2 DIF FFT (only for N = 2^p : p>1 and integer)
+%%  Radix-2 DIF FFT (only for N = 2^p : p>1 and integer)
 clc; clear;
 
-seq = input('Enter seq. : ');
+%% Requires Signal Processing Toolbox
+
+seq = input('Enter seq. [4/8/16.. pts] : ');
 len = length(seq);
 p = ceil(log2(len)); % ceil() rounds up to nearest integer
 
 % appending zeros
 disp('Zeros appended (if required) : eligible for len(seq.) = 2^p');
-seq = [seq, zeros(2^p - len)]
+seq = [seq, zeros(1, 2^p - len)]
 FFTseq = seq;
 
 for stage = p:-1:1 % stages got reversed
@@ -31,7 +33,7 @@ for stage = p:-1:1 % stages got reversed
     end
 end
 
-% Bit reversed order
+% Bit reversed order : Requires Signal Processing Toolbox
 fftBR = bitrevorder(FFTseq)
 
 % Plots
